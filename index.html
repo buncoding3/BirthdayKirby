@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>birthday cake</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div id="birthdayText"></div>
+        <div class="cake-wrapper">
+            <div class="pixelart-to-css"></div>
+            <div class="cake" id="cake"></div>
+        </div>
+    </div> 
+
+    <div class="songSection">
+        <div class="songText">
+            <div class="songTitle"> ♡ A birthday song for you ⊹₊⋆♡ </div>
+            <div class="songDescription">
+              you probably know this song but i always think of you when i hear it
+            </div>
+        </div>
+        <a href="https://youtu.be/Jir-WItz1OI?si=14N-3xDDnVvWWN0-" target="_blank" class="songLink">
+            ♫ Pretty Boy — The Neighbourhood
+        </a>
+    </div>
+    <div class="heart"></div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get("name") || "dodo";
+        let candleCount = parseInt(params.get("candles")) || 3;
+        candleCount = Math.min(Math.max(candleCount, 1), 3);
+
+        const birthdayText = document.getElementById("birthdayText");
+        birthdayText.innerHTML = `
+            <div id="mainTitle">Happy Birthday, ${name}!</div>
+            <div id="subTitle">
+               i hope this year brings u everything you are hoping for & so much more i hope its filled w laughter happiness, and all the little things that make you smile ~<br>
+               even though i have only known you for a short while i have genuinely enjoyed having you around ( ᴗ͈ˬᴗ͈)<br>
+               you are one of those people who are easy to admire smart, thoughtful, respectful, mature & always so well-spoken im really glad our paths crossed and im happy i get to celebrate your birthday w u im genuinely grateful to have u in my life <br>
+               ₊˚⊹ ᰔ wishing you the happiest birthday !! Enjoy your day ₊˚⊹ ᰔ ~
+            </div>
+        `;
+        const cake = document.getElementById("cake");
+    </script>
+</body>
+</html>
